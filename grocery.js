@@ -16,19 +16,19 @@ for (let i = 0; i < products.length; i++) {
   total_Price += products[i].price;
 }
 
-console.log(`The Total Cost: $${total_Price.toFixed(2)}`);
+console.log(`The Total Cost: $${total_Price}`);
 
 let discount = 0.1;
 let cost = total_Price * discount;
 
 total_Price = total_Price - cost;
 
-console.log(`The discount applied: $${cost.toFixed(2)}`);
+console.log(`The discount applied: $${cost}`);
 
 let tax = 0.07;
 let taxpayment = total_Price * tax;
 
 total_Price = total_Price + taxpayment;
 
-console.log(`Tax amount: $${taxpayment.toFixed(2)}`);
-console.log(`The final amount: $${total_Price.toFixed(2)}`);
+console.log(`Tax amount: $${taxpayment}`);
+console.log(`The final amount: $${total_Price}`);
