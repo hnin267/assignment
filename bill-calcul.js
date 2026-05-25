@@ -11,24 +11,24 @@ for (let i = 0; i < products.length; i++) {
   totalPrice += products[i].price;
 }
 
-console.log(`Total bill: $${totalPrice.toFixed(2)}`);
+console.log(`Total bill: $${totalPrice}`);
 
 let service = 0.1;
 let serviceCharge = totalPrice * service;
 
 totalPrice += serviceCharge;
 
-console.log(`Service charge: $${serviceCharge.toFixed(2)}`);
+console.log(`Service charge: $${serviceCharge}`);
 
 let tax = 0.07;
 let taxPayment = totalPrice * tax;
 
 totalPrice += taxPayment;
 
-console.log(`Tax amount: $${taxPayment.toFixed(2)}`);
+console.log(`Tax amount: $${taxPayment}`);
 
 let numberOfPeople = 2;
 
 let split = totalPrice / numberOfPeople;
 
-console.log(`Each person pays: $${split.toFixed(2)}`);
+console.log(`Each person pays: $${split}`);
