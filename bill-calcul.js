@@ -5,30 +5,30 @@ let products = [
   { name: "Dessert", price: 5.75 },
 ];
 
-let totalPrice = 0;
+let totalBill = 0;
 
 for (let i = 0; i < products.length; i++) {
-  totalPrice += products[i].price;
+  totalBill += products[i].price;
 }
 
-console.log(`Total bill: $${totalPrice}`);
+console.log(`Total bill: $${totalBill}`);
 
 let service = 0.1;
-let serviceCharge = totalPrice * service;
+let serviceCharge = totalBill * service;
 
-totalPrice += serviceCharge;
+totalBill += serviceCharge;
 
 console.log(`Service charge: $${serviceCharge}`);
 
 let tax = 0.07;
-let taxPay = totalPrice * tax;
+let taxPay = totalBill * tax;
 
-totalPrice += taxPay;
+totalBill += taxPay;
 
 console.log(`Tax amount: $${taxPay}`);
 
 let numberOfPeople = 4;
 
-let splitBill = totalPrice / numberOfPeople;
+let splitBill = totalBill / numberOfPeople;
 
 console.log(`Each person pays: $${splitBill}`);
