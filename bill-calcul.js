@@ -21,11 +21,11 @@ totalPrice += serviceCharge;
 console.log(`Service charge: $${serviceCharge}`);
 
 let tax = 0.07;
-let taxPayment = totalPrice * tax;
+let taxPay = totalPrice * tax;
 
-totalPrice += taxPayment;
+totalPrice += taxPay;
 
-console.log(`Tax amount: $${taxPayment}`);
+console.log(`Tax amount: $${taxPay}`);
 
 let numberOfPeople = 4;
 
