@@ -27,7 +27,7 @@ totalPrice += taxPayment;
 
 console.log(`Tax amount: $${taxPayment}`);
 
-let numberOfPeople = 2;
+let numberOfPeople = 4;
 
 let split = totalPrice / numberOfPeople;
 
