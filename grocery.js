@@ -19,11 +19,11 @@ for (let i = 0; i < products.length; i++) {
 console.log(`The Total Cost: $${totalCost}`);
 
 let discount = 0.1;
-let cost = totalCost * discount;
+let disCost = totalCost * discount;
 
-totalCost -= cost;
+totalCost -= disCost;
 
-console.log(`The discount applied: $${cost}`);
+console.log(`The discount applied: $${disCost}`);
 
 let tax = 0.07;
 let taxPay = totalCost * tax;
