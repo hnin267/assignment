@@ -4,10 +4,17 @@ let trip = {
   cost: 3.75,
 };
 
-let fuelNeeded = trip.distance / trip.efficiency;
+function calculateFuelNeeded(distance, efficiency) {
+  return distance / efficiency;
+}
 
-let tripCost = fuelNeeded * trip.cost;
+function calculateTripCost(fuelNeeded, costPerGallon) {
+  return fuelNeeded * costPerGallon;
+}
+
+let fuelNeeded = calculateFuelNeeded(trip.distance, trip.efficiency);
+
+let tripCost = calculateTripCost(fuelNeeded, trip.cost);
 
 console.log(`Fuel needed: ${fuelNeeded} gallons`);
-
 console.log(`Total trip cost: $${tripCost}`);

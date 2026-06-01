@@ -11,24 +11,27 @@ for (let i = 0; i < products.length; i++) {
   totalBill += products[i].price;
 }
 
-console.log(`Total bill: $${totalBill}`);
+console.log(`Subtotal: $${totalBill}`);
 
-let service = 0.1;
-let serviceCharge = totalBill * service;
+function calculatePercent(amount, percent) {
+  return amount * (percent / 100);
+}
 
+let serviceCharge = calculatePercent(totalBill, 10);
 totalBill += serviceCharge;
 
-console.log(`Service charge: $${serviceCharge}`);
+console.log(`Service Charge: $${serviceCharge}`);
 
-let tax = 0.07;
-let taxPay = totalBill * tax;
-
+let taxPay = calculatePercent(totalBill, 7);
 totalBill += taxPay;
 
-console.log(`Tax amount: $${taxPay}`);
+console.log(`Tax Amount: $${taxPay}`);
 
-let numberOfPeople = 4;
+function splitBill(total, numberOfPeople) {
+  return total / numberOfPeople;
+}
 
-let splitBill = totalBill / numberOfPeople;
+let amountPerPerson = splitBill(totalBill, 4);
 
-console.log(`Each person pays: $${splitBill}`);
+console.log(`Final Bill: $${totalBill}`);
+console.log(`Each person pays: $${amountPerPerson}`);
