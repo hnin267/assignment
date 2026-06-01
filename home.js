@@ -4,15 +4,17 @@ let areas = [
   { name: "Bathroom", sqft: 100, cost: 25 },
 ];
 
-let areaCost = 0;
-let totalCost = 0;
+function calculateCost(areas) {
+  let totalCost = 0;
+  for (let i = 0; i < areas.length; i++) {
+    let areaCost = areas[i].sqft * areas[i].cost;
 
-for (let i = 0; i < areas.length; i++) {
-  areaCost = areas[i].sqft * areas[i].cost;
+    console.log(`Cost for ${areas[i].name} is $${areaCost}.`);
 
-  console.log(`Cost for ${areas[i].name} is $${areaCost}.`);
-
-  totalCost += areaCost;
+    totalCost += areaCost;
+  }
+  return totalCost;
 }
+let totalCost = calculateCost(areas);
 
 console.log(`Total Renovation Cost: $${totalCost}`);

@@ -18,15 +18,15 @@ for (let i = 0; i < products.length; i++) {
 
 console.log(`The Total Cost: $${totalCost}`);
 
-let discount = 0.1;
-let disCost = totalCost * discount;
-
+function calculatedCost(cost, percent) {
+  return cost * (percent / 100);
+}
+let disCost = calculatedCost(totalCost, 10);
 totalCost -= disCost;
 
 console.log(`The discount applied: $${disCost}`);
 
-let tax = 0.07;
-let taxPay = totalCost * tax;
+let taxPay = calculatedCost(totalCost, 7);
 
 totalCost += taxPay;
 
